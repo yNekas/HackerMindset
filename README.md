@@ -1,3 +1,3 @@
 # HackerMindset
-Oi, professor. Me chamo João
+Oi, professor. Meu nome é João
 Aqui está o repo
