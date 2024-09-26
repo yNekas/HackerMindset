@@ -1,2 +1,24 @@
-abcd
-efg
+#!/bin/bash
+USUARIO=${whoami}
+CURSO="${USUARIO}cyber"
+MATERIAS=("redes" "programação" "arquitetura" "hardware")
+SAIDA="cyber.txt"
+> $SAIDA
+mkdir -p "$CURSO"
+echo "Estrutura do curso criada para o usuário: $USUARIO" >> $SAIDA
+echo "Curso: $CURSO" >> $SAIDA
+
+for MATERIA in "${MATERIA[@]}"; do
+    mkdir -p "$CURSOS/$MATERIA"
+
+    ARQUIVO="$CURSO/$MATERIA/aprendendo.txt"
+    echo "a melhor matéria é hackermindset" > "$ARQUIVO"
+    echo "Criando diretório: $CURSO/$MATERIA" >> $SAIDA
+    echo "Conteúdo do arquivo $ARQUIVO:" >> $SAIDA
+    cat "$ARQUIVO" >> $SAIDA
+    echo "-----------------------" >> $SAIDA
+done
+
+echo "estrutura de diretórios e arquivos criada" >> $SAIDA
+
+cat $SAIDA
